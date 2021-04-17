@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Pokemon } from '../_model/Pokemon';
 import { Type } from '../_model/Type';
+import { PokemonService } from '../_services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -38,5 +39,5 @@ export class PokemonListComponent {
       types: [Type.Fire],
     },
   ];
-  constructor() {}
+  constructor(public pokemonService: PokemonService) {}
 }
